@@ -11,7 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: [
         'favicon.ico',
-        'apple-touch-icon.png'
+        'apple-touch-icon.png',
+        'robots.txt',
+        '*.svg'
       ],
       manifest: {
         name: 'Todo PWA',
@@ -21,26 +23,32 @@ export default defineConfig({
         background_color: '#f0e7db',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '.',
-        start_url: '.',
+        categories: ['productivity', 'utilities'],
+        scope: '/todo-pwa/',
+        start_url: '/todo-pwa/',
         icons: [
           {
-            src: 'android-chrome-192x192.png', // ✅ no leading slash
+            src: 'pwa-32x32.png',
+            sizes: '32x32',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: 'android-chrome-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: 'apple-touch-icon.png',
-            sizes: '180x180',
+            src: 'maskable_icon_x512.png',
+            sizes: '512x512',
             type: 'image/png',
-            purpose: 'any'
+            purpose: 'maskable'
           }
         ]
       }
