@@ -6,8 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), VitePWA({
-    registerType: 'prompt',
-    includeAssets: ['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+    registerType: 'autoUpdate',
+    includeAssets: ['favicon.ico', "apple-touch-icon.png"],
     manifest: {
       name: "React-vite-app",
       short_name: "react-vite-app",
