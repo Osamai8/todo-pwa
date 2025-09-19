@@ -1,14 +1,15 @@
 {
   "name": "react-todo",
   "private": true,
-  "version": "2.1.0",
+  "version": "3.1.0",
   "type": "module",
   "homepage": "https://osama.i8.github.io/todo-pwa",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.1",
